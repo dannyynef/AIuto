@@ -17,3 +17,14 @@ const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+
+app.post("/api/consultation", (req, res) => {
+  const business = req.body;
+
+  console.log("Business received:", business);
+
+  res.json({
+    message: "Consultation received successfully!",
+    business: business
+  });
+});
